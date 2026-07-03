@@ -1,74 +1,26 @@
 media: images
 
 content:
+
   - name: site
     label: サイト基本情報
     type: file
     path: content/site.json
-    fields:
-      - name: title
-        label: サイト名
-        type: string
-
-      - name: hero_title
-        label: タイトル
-        type: string
-
-      - name: hero_text
-        label: キャッチコピー
-        type: string
-
-      - name: hero_button
-        label: ボタン文字
-        type: string
-
-      - name: about
-        label: サロン紹介文
-        type: text
-
-      - name: address
-        label: 住所
-        type: string
-
-      - name: tel
-        label: 電話番号
-        type: string
-
-      - name: contact_text
-        label: お問い合わせ文
-        type: text
-
-      - name: reserve_button
-        label: 予約ボタン
-        type: string
-
-      - name: map_url
-        label: Google Map URL
-        type: string
-
-      - name: footer
-        label: フッター
-        type: string
-
 
   - name: menu
     label: メニュー
-    type: file
-    path: content/menu.json
+    type: collection
+    path: content/menu
     fields:
-      - name: items
-        label: メニュー一覧
-        type: object
-        list: true
-        fields:
-          - name: name
-            label: メニュー名
-            type: string
 
-          - name: price
-            label: 料金
-            type: string
+      - name: name
+        label: メニュー名
+        type: string
 
-          - name: description
-            label: 説明
-            type: text
+      - name: price
+        label: 料金
+        type: string
+
+      - name: description
+        label: 説明
+        type: text
