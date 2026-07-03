@@ -1,0 +1,12 @@
+media: images
+
+content:
+  - name: news
+    label: お知らせ
+    type: collection
+    path: content/news
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
