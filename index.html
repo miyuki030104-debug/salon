@@ -22,7 +22,6 @@
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <div class="hero-text">
         <h2 id="hero-title">coming soon</h2>
@@ -31,30 +30,23 @@
     </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
     <h2>サロン紹介</h2>
     <p id="about-text"></p>
 </section>
 
-<!-- MENU -->
 <section id="menu">
     <h2>メニュー</h2>
     <div id="menu-list"></div>
 </section>
 
-<!-- ACCESS -->
 <section id="access">
     <h2>アクセス</h2>
     <p id="address"></p>
 
-    <iframe
-        id="map"
-        loading="lazy">
-    </iframe>
+    <iframe id="map" loading="lazy"></iframe>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
     <h2>お問い合わせ</h2>
 
@@ -70,30 +62,22 @@
     <p id="footer-text">© 2026 Beauty Salon</p>
 </footer>
 
-<!-- JSでJSON読み込み -->
 <script>
 fetch("content/site.json")
 .then(res => res.json())
 .then(data => {
 
     document.getElementById("site-title").innerText = data.title;
-
     document.getElementById("hero-title").innerText = data.hero_title;
     document.getElementById("hero-text").innerText = data.hero_text;
     document.getElementById("hero-button").innerText = data.hero_button;
 
     document.getElementById("about-text").innerText = data.about;
-
     document.getElementById("address").innerText = data.address;
-
     document.getElementById("tel").innerText = "TEL：" + data.tel;
-
     document.getElementById("contact-text").innerText = data.contact_text;
-
     document.getElementById("reserve-button").innerText = data.reserve_button;
-
     document.getElementById("map").src = data.map_url;
-
     document.getElementById("footer-text").innerText = data.footer;
 });
 
@@ -109,7 +93,8 @@ fetch("content/menu.json")
 
         div.innerHTML = `
             <h3>${item.name}</h3>
-            <p>${item.price}</p>
+            <p class="price">${item.price}</p>
+            <p class="desc">${item.description}</p>
         `;
 
         container.appendChild(div);
