@@ -1,19 +1,13 @@
 {
   "title": "Beauty Salon",
-
-  "hero_title": "coming soon",
+  "hero_title": "こんにちは",
   "hero_text": "癒しと美を提供するプライベートサロン",
   "hero_button": "お問い合わせ",
-
   "about": "リラックスできる空間で、お客様一人ひとりに合わせた施術をご提供します。",
-
   "address": "○○県○○市○○1-2-3",
   "tel": "000-0000-0000",
-
   "contact_text": "InstagramのDMよりお問い合わせください。",
   "reserve_button": "予約する",
-
   "map_url": "https://www.google.com/maps/embed?pb=",
-
   "footer": "© 2026 Beauty Salon"
 }
