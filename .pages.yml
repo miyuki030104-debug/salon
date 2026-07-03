@@ -9,6 +9,7 @@ content:
       - { name: title, label: サイトタイトル, type: string }
       - { name: hero_title, label: ヒーロータイトル, type: string }
       - { name: hero_text, label: ヒーローテキスト, type: text }
+      - { name: hero_image, label: ヒーロー画像, type: image }
       - { name: hero_button, label: ヒーローボタン, type: string }
       - { name: about, label: サロン紹介, type: text }
       - { name: address, label: 住所, type: string }
