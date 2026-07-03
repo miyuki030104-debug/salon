@@ -53,9 +53,7 @@
     <p id="tel"></p>
     <p id="contact-text"></p>
 
-    <a href="#" class="button" id="reserve-button">
-        予約する
-    </a>
+    <a href="#" class="button" id="reserve-button">予約する</a>
 </section>
 
 <footer>
@@ -68,26 +66,34 @@ fetch("content/site.json")
 .then(data => {
 
     document.getElementById("site-title").innerText = data.title;
+
     document.getElementById("hero-title").innerText = data.hero_title;
     document.getElementById("hero-text").innerText = data.hero_text;
     document.getElementById("hero-button").innerText = data.hero_button;
 
     document.getElementById("about-text").innerText = data.about;
+
     document.getElementById("address").innerText = data.address;
+
     document.getElementById("tel").innerText = "TEL：" + data.tel;
+
     document.getElementById("contact-text").innerText = data.contact_text;
+
     document.getElementById("reserve-button").innerText = data.reserve_button;
+
     document.getElementById("map").src = data.map_url;
+
     document.getElementById("footer-text").innerText = data.footer;
 });
 
-fetch("content/menu.json")
+fetch("content/menu")
 .then(res => res.json())
 .then(menu => {
 
     const container = document.getElementById("menu-list");
 
     menu.forEach(item => {
+
         const div = document.createElement("div");
         div.className = "card";
 
