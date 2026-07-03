@@ -68,3 +68,7 @@ content:
           - name: price
             label: 料金
             type: string
+
+          - name: description
+            label: 説明
+            type: text
