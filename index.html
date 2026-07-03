@@ -10,7 +10,8 @@
 <body>
 
 <header>
-    <h1>Beauty Salon</h1>
+    <h1 id="site-title">Beauty Salon</h1>
+
     <nav>
         <ul>
             <li><a href="#about">サロン紹介</a></li>
@@ -21,71 +22,101 @@
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
     <div class="hero-text">
-        <h2>coming soon</h2>
-        <p>癒しと美を提供するプライベートサロン</p>
-        <a href="#contact" class="button">お問い合わせ</a>
+        <h2 id="hero-title">coming soon</h2>
+        <p id="hero-text"></p>
+        <a href="#contact" class="button" id="hero-button">お問い合わせ</a>
     </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
     <h2>サロン紹介</h2>
-    <p>
-        リラックスできる空間で、お客様一人ひとりに合わせた施術をご提供します。
-    </p>
+    <p id="about-text"></p>
 </section>
 
+<!-- MENU -->
 <section id="menu">
     <h2>メニュー</h2>
-
-    <div class="card">
-        <h3></h3>
-        <p></p>
-    </div>
-
-    <div class="card">
-        <h3></h3>
-        <p></p>
-    </div>
-
-    <div class="card">
-        <h3></h3>
-        <p></p>
-    </div>
-
+    <div id="menu-list"></div>
 </section>
 
+<!-- ACCESS -->
 <section id="access">
     <h2>アクセス</h2>
-    <p>○○県○○市○○1-2-3</p>
+    <p id="address"></p>
 
     <iframe
-        src="https://www.google.com/maps/embed?pb="
+        id="map"
         loading="lazy">
     </iframe>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
     <h2>お問い合わせ</h2>
 
-    <p>
-        TEL：000-0000-0000
-    </p>
+    <p id="tel"></p>
+    <p id="contact-text"></p>
 
-    <p>
-        InstagramのDMよりお問い合わせください。
-    </p>
-
-    <a href="#" class="button">
+    <a href="#" class="button" id="reserve-button">
         予約する
     </a>
-
 </section>
 
 <footer>
-    <p>© 2026 Beauty Salon</p>
+    <p id="footer-text">© 2026 Beauty Salon</p>
 </footer>
+
+<!-- JSでJSON読み込み -->
+<script>
+fetch("content/site.json")
+.then(res => res.json())
+.then(data => {
+
+    document.getElementById("site-title").innerText = data.title;
+
+    document.getElementById("hero-title").innerText = data.hero_title;
+    document.getElementById("hero-text").innerText = data.hero_text;
+    document.getElementById("hero-button").innerText = data.hero_button;
+
+    document.getElementById("about-text").innerText = data.about;
+
+    document.getElementById("address").innerText = data.address;
+
+    document.getElementById("tel").innerText = "TEL：" + data.tel;
+
+    document.getElementById("contact-text").innerText = data.contact_text;
+
+    document.getElementById("reserve-button").innerText = data.reserve_button;
+
+    document.getElementById("map").src = data.map_url;
+
+    document.getElementById("footer-text").innerText = data.footer;
+});
+
+fetch("content/menu.json")
+.then(res => res.json())
+.then(menu => {
+
+    const container = document.getElementById("menu-list");
+
+    menu.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "card";
+
+        div.innerHTML = `
+            <h3>${item.name}</h3>
+            <p>${item.price}</p>
+        `;
+
+        container.appendChild(div);
+    });
+
+});
+</script>
 
 </body>
 </html>
