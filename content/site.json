@@ -1,13 +1,13 @@
 {
-  "title": "Beauty Salon",
-  "hero_title": "coming soon",
-  "hero_text": "あなたの美しさを引き出すサロン",
-  "hero_button": "お問い合わせ",
-  "about": "当サロンは髪質改善とデザインカラーを得意としています。",
-  "address": "大阪府大阪市〇〇区〇〇1-2-3",
-  "tel": "06-1234-5678",
-  "contact_text": "お気軽にお問い合わせください。",
-  "reserve_button": "予約する",
-  "map_url": "https://www.google.com/maps/embed?pb=",
-  "footer": "© 2026 Beauty Salon"
+    "title": "Beauty Salon",
+    "hero_title": "coming soon",
+    "hero_text": "あなたの美しさを引き出すサロン",
+    "hero_button": "お問い合わせ",
+    "about": "当サロンは髪質改善とデザインカラーを得意としています。",
+    "address": "大阪府大阪市〇〇区〇〇1-2-3",
+    "tel": "06-1234-5678",
+    "contact_text": "お気軽にお問い合わせください。",
+    "reserve_button": "予約する",
+    "map_url": "https://www.google.com/maps/embed?pb=",
+    "footer": "© 2026 Beauty Salon"
 }
