@@ -127,6 +127,13 @@ footer{
     padding:20px;
 }
 
+footer a{
+    color:#fff;
+    text-decoration:none;
+    margin-top:10px;
+    display:inline-block;
+}
+
 /* MOBILE */
 @media(max-width:768px){
 
