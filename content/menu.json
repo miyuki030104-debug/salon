@@ -1,20 +1,8 @@
-[
-  {
-    "id": "cut",
-    "name": "カット",
-    "price": "3000円",
-    "description": "骨格に合わせた似合わせカット"
-  },
-  {
-    "id": "color",
-    "name": "カラー",
-    "price": "5000円",
-    "description": "透明感のあるナチュラルカラー"
-  },
-  {
-    "id": "treatment",
-    "name": "トリートメント",
-    "price": "4000円",
-    "description": "髪質改善トリートメント"
-  }
-]
+{
+  "items": [
+    {
+      "name": "テスト",
+      "price": "22222222222"
+    }
+  ]
+}
