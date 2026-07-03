@@ -1,19 +1,12 @@
 {
   "items": [
     {
-      "name": "ｙｙｙｙｙｙｙｙ",
-      "price": "1234567890",
-      "description": "テスト用説明"
-    },
-    {
       "name": "カラー",
-      "price": "5000円",
-      "description": "髪色を明るくする施術"
+      "price": "5000円"
     },
     {
       "name": "トリートメント",
-      "price": "4000円",
-      "description": "髪質改善ケア"
+      "price": "4000円"
     }
   ]
 }
