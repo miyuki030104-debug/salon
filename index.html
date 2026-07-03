@@ -65,9 +65,9 @@
 </footer>
 
 <script>
-/* ======================
+/* =======================
    site.json 読み込み
-====================== */
+======================= */
 fetch("content/site.json")
 .then(res => res.json())
 .then(data => {
@@ -87,17 +87,27 @@ fetch("content/site.json")
 });
 
 
-/* ======================
-   menu.json 読み込み（CMS対応版）
-====================== */
+/* =======================
+   menu.json（エラー完全回避版）
+======================= */
 fetch("content/menu.json")
 .then(res => res.json())
 .then(data => {
 
-    const menu = data.items; // ★ここ重要
     const container = document.getElementById("menu-list");
-
     container.innerHTML = "";
+
+    // ★ここが重要：配列かどうかを強制判定
+    let menu = [];
+
+    if (Array.isArray(data)) {
+        menu = data;
+    } else if (Array.isArray(data.items)) {
+        menu = data.items;
+    } else {
+        console.error("menu.jsonの形式が不正:", data);
+        return;
+    }
 
     menu.forEach(item => {
 
@@ -112,6 +122,10 @@ fetch("content/menu.json")
 
         container.appendChild(div);
     });
+
+})
+.catch(err => {
+    console.error("menu読み込み失敗:", err);
 });
 </script>
 
