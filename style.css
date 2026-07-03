@@ -12,7 +12,6 @@ body{
 }
 
 /* ヘッダー */
-
 header{
     background:white;
     padding:20px;
@@ -47,8 +46,7 @@ nav a:hover{
     color:#c57b8a;
 }
 
-/* メイン画像 */
-
+/* HERO */
 .hero{
     height:70vh;
     display:flex;
@@ -67,8 +65,7 @@ nav a:hover{
     margin-bottom:30px;
 }
 
-/* ボタン */
-
+/* BUTTON */
 .button{
     display:inline-block;
     padding:12px 25px;
@@ -82,8 +79,7 @@ nav a:hover{
     background:#b05f70;
 }
 
-/* セクション */
-
+/* SECTION */
 section{
     max-width:1000px;
     margin:auto;
@@ -95,8 +91,7 @@ section h2{
     color:#c57b8a;
 }
 
-/* カード */
-
+/* CARD */
 .card{
     background:white;
     margin-bottom:20px;
@@ -105,8 +100,18 @@ section h2{
     box-shadow:0 3px 8px rgba(0,0,0,0.08);
 }
 
-/* Google Map */
+.price{
+    font-weight:bold;
+    margin-top:8px;
+}
 
+.desc{
+    font-size:14px;
+    color:#666;
+    margin-top:6px;
+}
+
+/* MAP */
 iframe{
     width:100%;
     height:350px;
@@ -114,8 +119,7 @@ iframe{
     border-radius:10px;
 }
 
-/* フッター */
-
+/* FOOTER */
 footer{
     background:#333;
     color:white;
@@ -123,8 +127,7 @@ footer{
     padding:20px;
 }
 
-/* スマホ対応 */
-
+/* MOBILE */
 @media(max-width:768px){
 
 header{
